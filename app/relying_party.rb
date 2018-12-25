@@ -4,7 +4,7 @@ module WebAuthnDemo
     helpers WebAuthnDemo::Helpers
 
     configure do
-      set :origin, "http://localhost:9292"
+      set :origin, (ENV["WEBAUTHN_ORIGIN"] || "http://localhost:9292")
       set :db, {}
     end
 
