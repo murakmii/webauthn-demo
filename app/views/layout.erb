@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebAuthn デモ</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="base64js.min.js"></script>
+  </head>
+  <body>
+    <div id="modal">
+      <div id="modal-inner">
+        <div id="login-succeeded" class="modal-type">
+          <h3>成功!</h3>
+
+          <p>
+            サインアップに成功しました！<br>
+            同じユーザーIDを使って<a href="/login">ログイン</a>を試して見ましょう
+          </p>
+        </div>
+      </div> 
+    </div>
+
+    <header>
+      <div id="header">
+        <h1 class="content"><a href="/">WebAuthn デモ</a></h1>
+      </div>
+    </header>
+    
+    <div class="content">
+      <%= yield %>
+    </div>
+  </body>
+</html>
