@@ -2,7 +2,7 @@
 
 ## これはなに?
 
-コミックマーケット95で頒布予定の同人誌「Getting started with WebAuthn」で部分的に参照していた、  
+コミックマーケット95で頒布予定の同人誌「Getting started with WebAuthn」で部分的に参照している、  
 WebAuthnによる認証のサンプル実装の完全版です。実際に手元で動作させることができます。
 
 ## Setup
@@ -24,7 +24,7 @@ open "http://localhost:9292"
 
 本リポジトリの実装ではRubyを用いています。  
 そのため `bundle install` を使用した、一般的なRubyプロジェクトと同様の方法でセットアップすることも難しくありません。  
-`bundle exec rackup`によりデモ用のWebサーバーを起動することができます。
+`bundle exec rackup`によりデモ用のWebサーバーを起動することができます。  
 データベース等の周辺環境のセットアップは不要です。
 
 ```sh
@@ -40,14 +40,14 @@ open "http://localhost:9292"
 ### 環境変数の設定
 
 本リポジトリの実装は、デフォルトでは `http://localhost:9292` というURLでアクセスされることを前提とした実装となっています。  
-別のURL(例えば異なるポート番号)でアクセスしたい場合、環境変数 `WEBAUTHN_ORIGIN` に適切なURLを設定し起動してください。
+別のURL(例えば異なるポート番号)でアクセスしたい場合、環境変数 `WEBAUTHN_ORIGIN` に適切なURLを設定しWebサーバーを起動してください。
 
 ```sh
-# bundler
-WEBAUTHN_ORIGIN="http://localhost:8080" bundle exec rackup -E production -p 8080
-
 # docker
 docker run -d -p 8080:80 -e WEBAUTHN_ORIGIN="http://localhost:8080" murakmii/webauthn-demo:v1.0
+
+# bundler
+WEBAUTHN_ORIGIN="http://localhost:8080" bundle exec rackup -E production -p 8080
 ```
 
 ## デモの利用
@@ -71,7 +71,7 @@ URL(ほとんどの場合、 `http://localhost:9292` )にアクセスすると�
 Registrationを完了させるための操作はAuthenticatorによって様々です。  
 例えばYubiKey 4であればタッチ部分が点滅するため、それをタッチすることでRegistrationを完了させることができます。
 
-Registrationが完了したら、そのユーザーIDを使ってログインを行うことができます。
+Registrationが完了したら、そのユーザーIDを使ってログインを行うことができます。  
 (Registration完了後は、ログインページへの遷移を促すUIが表示されます)
 
 ### ログイン
