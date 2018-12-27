@@ -57,7 +57,7 @@ YubiKeyのようなAuthenticatorを所持していることが前提となるの
 
 URL(ほとんどの場合、 `http://localhost:9292` )にアクセスすると、以下のようなページが表示されます。
 
-![index](https://github.com/murakmii/webauthn-demo/blob/master/README/index.png?raw=true)
+<img src="https://github.com/murakmii/webauthn-demo/blob/master/README/index.png?raw=true" width="400" />
 
 「サインアップ」ボタンからサインアップページへ、「ログイン」ボタンからログインページへ遷移することができます。
 
@@ -66,7 +66,7 @@ URL(ほとんどの場合、 `http://localhost:9292` )にアクセスすると�
 適当なユーザーIDを決め、フォームに入力し「サインアップ」ボタンを押下することでWebAuthnのRegistrationが開始されます。  
 (画像はChromeのバージョン 70.0.3538.110 でサインアップを行なった場合の画像)
 
-![signup](https://github.com/murakmii/webauthn-demo/blob/master/README/signup.png?raw=true)
+<img src="https://github.com/murakmii/webauthn-demo/blob/master/README/signup.png?raw=true" width="400" />
 
 Registrationを完了させるための操作はAuthenticatorによって様々です。  
 例えばYubiKey 4であればタッチ部分が点滅するため、それをタッチすることでRegistrationを完了させることができます。
@@ -79,7 +79,7 @@ Registrationが完了したら、そのユーザーIDを使ってログインを
 サインアップに使用したユーザーIDを用いてログインを行うことができます。  
 ユーザーIDをフォームに入力し、「ログイン」ボタンを押下することでWebAuthnのAuthenticationが開始されます。
 
-![login](https://github.com/murakmii/webauthn-demo/blob/master/README/login.png?raw=true)
+<img src="https://github.com/murakmii/webauthn-demo/blob/master/README/login.png?raw=true" width="400" />
 
 その後はRegistrationと同様、手元のブラウザーとAuthenticatorに合わせた操作でAuthenticationを完了させてください。  
 完了後はログイン済みとなります。  
